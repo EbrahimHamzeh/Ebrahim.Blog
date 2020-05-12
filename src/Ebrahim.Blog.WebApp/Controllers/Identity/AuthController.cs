@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Ebrahim.Blog.Common.GuardToolkit;
 using Ebrahim.Blog.DataLayer.Context;
@@ -26,8 +27,8 @@ namespace Ebrahim.Blog.WebApp.Controllers.Identity
         private readonly IUnitOfWork _uow;
         private readonly IAntiForgeryCookieService _antiforgery;
         private readonly ITokenFactoryService _tokenFactoryService;
-        
-        public AuthController(IUsersService usersService, ITokenStoreService tokenStoreService, ITokenFactoryService tokenFactoryService, IUnitOfWork uow, IAntiForgeryCookieService antiforgery) 
+
+        public AuthController(IUsersService usersService, ITokenStoreService tokenStoreService, ITokenFactoryService tokenFactoryService, IUnitOfWork uow, IAntiForgeryCookieService antiforgery)
         {
             _usersService = usersService;
             _usersService.CheckArgumentIsNull(nameof(usersService));
@@ -68,7 +69,7 @@ namespace Ebrahim.Blog.WebApp.Controllers.Identity
 
         [AllowAnonymous]
         [HttpPost("[action]")]
-        public async Task<IActionResult> RefreshToken([FromBody]TokenViewModel model)
+        public async Task<IActionResult> RefreshToken([FromBody] TokenViewModel model)
         {
             var refreshTokenValue = model.RefreshToken;
             if (string.IsNullOrWhiteSpace(refreshTokenValue))
@@ -118,7 +119,7 @@ namespace Ebrahim.Blog.WebApp.Controllers.Identity
         public IActionResult GetUserInfo()
         {
             var claimsIdentity = User.Identity as ClaimsIdentity;
-            return Json(new { Username = claimsIdentity.Name });
+            return Ok(JsonSerializer.Serialize(new { Username = claimsIdentity.Name }));
         }
     }
 }
