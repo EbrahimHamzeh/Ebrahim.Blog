@@ -20,6 +20,7 @@ namespace Ebrahim.Blog.IocConfig
             services.AddCustomeHostedService(); // background process and scheduler
             services.AddSecurityServices();
             services.AddFilterMVC();
+            services.AddSwaggerServices();
         }
 
         public static SiteSettings GetSiteSettings(this IServiceCollection services)

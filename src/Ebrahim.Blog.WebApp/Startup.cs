@@ -87,7 +87,7 @@ namespace Ebrahim.Blog.WebApp
 
             app.UseHttpsRedirection();
 
-            //app.UseStatusCodePages();
+            app.UseStatusCodePages();
 
             app.UseStaticFiles();
 
@@ -98,6 +98,15 @@ namespace Ebrahim.Blog.WebApp
             app.UseCors("CorsPolicy");
 
             app.UseAuthorization();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(setupAction =>
+            {
+                setupAction.SwaggerEndpoint(
+                    "/swagger/LibraryOpenAPISpecification/swagger.json",
+                    "Library API");
+            });
 
             app.UseEndpoints(endpoints =>
             {
