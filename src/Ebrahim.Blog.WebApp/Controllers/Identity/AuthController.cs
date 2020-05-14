@@ -8,10 +8,12 @@ using Ebrahim.Blog.Services.Security;
 using Ebrahim.Blog.ViewModels.Identity.Auth;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ebrahim.Blog.WebApp.Controllers.Identity
 {
+    [Produces("application/json")]
     [Route("api/v1/[controller]")]
     [EnableCors("CorsPolicy")]
     public class AuthController : ControllerBase
@@ -40,10 +42,34 @@ namespace Ebrahim.Blog.WebApp.Controllers.Identity
             _tokenFactoryService.CheckArgumentIsNull(nameof(tokenFactoryService));
         }
 
+        /// <summary>
+        /// اعتبار سنجی کاربر در ابتدا
+        /// </summary>
+        /// <param name="loginUser">دو مقدار نام کاربری و رمز عبور را به صورت json وارد نمایید</param>
+        /// <returns>توکن و refresh token برگشت داده میشود.</returns>
+        /// <response code="200">توکن بازگشت</response>
+        /// <response code="401">اگر کاربر وجود نداشته باشد و یا اینکه کاربر غیرفعال باشد.!-- همچنین اگر نام کاربری و رمز عبور اشتباه باشه</response>
+        /// <response code="400">اگر پارامتر‌های ارسالی نامعتبر باشد.</response>
+        /// <remarks>
+        /// Sample request (this request updates the author's first name) \
+        /// PATCH /authors/id \
+        /// [ \
+        ///     { \
+        ///       "op": "replace", \
+        ///       "path": "/firstname", \
+        ///       "value": "new first name" \
+        ///       } \
+        /// ] \
+        /// </remarks>
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesDefaultResponseType]
         [AllowAnonymous]
         [IgnoreAntiforgeryToken]
         [HttpPost("[action]")]
-        public async Task<IActionResult> Login([FromBody] LoginViewModel loginUser)
+        [Consumes("application/json")]
+        public async Task<ActionResult<ClientToken>> LoginAsync([FromBody] LoginViewModel loginUser)
         {
             if (loginUser == null)
                 return BadRequest("user is not set.");
@@ -58,7 +84,7 @@ namespace Ebrahim.Blog.WebApp.Controllers.Identity
 
             _antiforgery.RegenerateAntiForgeryCookies(result.Claims);
 
-            return Ok(new { access_token = result.AccessToken, refresh_token = result.RefreshToken });
+            return Ok(new ClientToken { AccessToken = result.AccessToken, RefreshToken = result.RefreshToken });
         }
 
         [AllowAnonymous]

@@ -1,7 +1,6 @@
 using System;
-using Ebrahim.Blog.Services;
-using Ebrahim.Blog.Services.Security;
-using Microsoft.AspNetCore.Http;
+using System.IO;
+using System.Linq;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Ebrahim.Blog.IocConfig.Extensions
@@ -30,6 +29,9 @@ namespace Ebrahim.Blog.IocConfig.Extensions
                            Url = new Uri("https://opensource.org/licenses/MIT")
                        }
                    });
+
+                var xmlFiles = Directory.GetFiles(AppContext.BaseDirectory, "*.xml", SearchOption.TopDirectoryOnly).ToList();
+                xmlFiles.ForEach(xmlFile => setupAction.IncludeXmlComments(xmlFile));
             });
             return services;
         }
