@@ -8,9 +8,23 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
-    <PackageReference Include="MSTest.TestAdapter" Version="2.1.0" />
-    <PackageReference Include="MSTest.TestFramework" Version="2.1.0" />
+    <PackageReference Include="Moq" Version="4.14.1" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
+  </ItemGroup>
+
+    <ItemGroup>
+    <None Include="..\Ebrahim.Blog.WebApp\appsettings.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ebrahim.Blog.WebApp\Ebrahim.Blog.WebApp.csproj" />
+    <ProjectReference Include="..\Ebrahim.Blog.Common\Ebrahim.Blog.Common.csproj" />
+    <ProjectReference Include="..\Ebrahim.Blog.DataLayer\Ebrahim.Blog.DataLayer.csproj" />
+    <ProjectReference Include="..\Ebrahim.Blog.DomainClasses\Ebrahim.Blog.DomainClasses.csproj" />
+    <ProjectReference Include="..\Ebrahim.Blog.Services\Ebrahim.Blog.Services.csproj" />
+    <ProjectReference Include="..\Ebrahim.Blog.ViewModels\Ebrahim.Blog.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>

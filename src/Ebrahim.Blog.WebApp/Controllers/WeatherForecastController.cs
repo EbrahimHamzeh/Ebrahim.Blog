@@ -24,16 +24,24 @@ namespace Ebrahim.Blog.WebApp.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public ActionResult<List<WeatherForecast>> Get()
         {
             var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return Ok(new List<WeatherForecast>() {
+                new WeatherForecast()
             {
-                Date = DateTime.Now.AddDays(index),
+                Date = DateTime.Now,
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+            },
+            {
+ new WeatherForecast()
+            {
+                Date = DateTime.Now,
+                TemperatureC = rng.Next(-20, 55),
+                Summary = Summaries[rng.Next(Summaries.Length)]
+            }
+            } });
         }
     }
 }
