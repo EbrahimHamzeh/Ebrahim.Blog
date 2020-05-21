@@ -20,6 +20,8 @@ using Ebrahim.Blog.Services;
 using Ebrahim.Blog.Test.Base;
 using Ebrahim.Blog.Services.Identity;
 using Ebrahim.Blog.Services.Security;
+using System.Threading.Tasks;
+using Ebrahim.Blog.ViewModels.Identity.Auth;
 
 namespace Ebrahim.Blog.Test
 {
@@ -43,10 +45,53 @@ namespace Ebrahim.Blog.Test
         {
             _serviceProvider.RunScopedService<IUnitOfWork>(context =>
            {
-                var users = context.Set<User>();
-                var temp = users.Any(x => x.Username == "Admin");
-                Assert.True(users.Any(x => x.Username == "Ebrahim"));
-            });
+               var users = context.Set<User>();
+               var temp = users.Any(x => x.Username == "Admin");
+               Assert.True(users.Any(x => x.Username == "Ebrahim"));
+           });
+        }
+
+        /// <summary>
+        /// اطلاعات اشتباه می فرستم و باید بگه 401
+        /// </summary>
+        /// <returns></returns>
+        [Fact]
+        public async Task check_wrong_info()
+        {
+            var response = await _controller.LoginAsync(new ViewModels.Identity.Auth.LoginViewModel { Username = "ebrahim", Password = "@ebrahim" });
+            Assert.IsType<UnauthorizedResult>(response.Result);
+        }
+
+        /// <summary>
+        /// تست با مقادیر خالی
+        /// </summary>
+        /// <returns></returns>
+        [Fact]
+        public async Task check_empty_info()
+        {
+            var response = await _controller.LoginAsync(new ViewModels.Identity.Auth.LoginViewModel { Username = "", Password = "" });
+            Assert.IsType<UnauthorizedResult>(response.Result);
+        }
+
+        /// <summary>
+        /// تست با مقادیر نال
+        /// </summary>
+        /// <returns></returns>
+        [Fact]
+        public async Task check_null_info()
+        {
+            var response = await _controller.LoginAsync(new ViewModels.Identity.Auth.LoginViewModel());
+            Assert.IsType<UnauthorizedResult>(response.Result);
+        }
+
+        [Fact]
+        public async Task TestName()
+        {
+            var response = await _controller.LoginAsync(new ViewModels.Identity.Auth.LoginViewModel { Username = "ebrahim", Password = "1234" });
+            var result = Assert.IsType<OkObjectResult>(response.Result);
+            var model = Assert.IsType<ClientToken>(result.Value);
+            Assert.NotEmpty(model.AccessToken);
+            Assert.NotEmpty(model.RefreshToken);
         }
     }
 }
