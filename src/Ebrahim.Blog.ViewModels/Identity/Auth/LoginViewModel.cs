@@ -12,6 +12,7 @@ namespace Ebrahim.Blog.ViewModels.Identity.Auth
         /// نام کاربری
         /// </summary>
         [Required]
+        []
         public string Username { get; set; }
         
         /// <summary>

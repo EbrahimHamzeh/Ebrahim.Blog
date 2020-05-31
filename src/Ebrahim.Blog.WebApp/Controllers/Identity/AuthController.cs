@@ -71,7 +71,7 @@ namespace Ebrahim.Blog.WebApp.Controllers.Identity
         [Consumes("application/json")]
         public async Task<ActionResult<ClientToken>> LoginAsync([FromBody] LoginViewModel loginUser)
         {
-            if (loginUser == null)
+            if (loginUser == null || !ModelState.IsValid)
                 return BadRequest("user is not set.");
 
             var user = await _usersService.FindUserAsync(loginUser.Username, loginUser.Password);

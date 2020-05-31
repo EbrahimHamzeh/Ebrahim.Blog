@@ -48,6 +48,7 @@ namespace Ebrahim.Blog.Services.Identity
 
         public Task<User> FindUserAsync(string username, string password)
         {
+            if(string.IsNullOrWhiteSpace(username) && string.IsNullOrWhiteSpace(password)) return null;
             var passwordHash = _securityService.GetSha256Hash(password);
             return _users.FirstOrDefaultAsync(x => x.Username == username && x.Password == passwordHash);
         }

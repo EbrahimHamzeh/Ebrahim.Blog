@@ -10,7 +10,7 @@ namespace Ebrahim.Blog.IocConfig.Extensions
     {
         public static IServiceCollection AddGlobalServices(this IServiceCollection services, SiteSettings siteSettings)
         {
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddHttpContextAccessor(); // services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<IDbInitializer, DbInitializer>();
             services.AddCors(options =>
             {
