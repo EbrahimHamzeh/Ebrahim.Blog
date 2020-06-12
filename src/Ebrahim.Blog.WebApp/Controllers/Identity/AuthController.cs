@@ -6,10 +6,12 @@ using Ebrahim.Blog.DataLayer.Context;
 using Ebrahim.Blog.Services.Identity;
 using Ebrahim.Blog.Services.Security;
 using Ebrahim.Blog.ViewModels.Identity.Auth;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace Ebrahim.Blog.WebApp.Controllers.Identity
 {
@@ -24,7 +26,9 @@ namespace Ebrahim.Blog.WebApp.Controllers.Identity
         private readonly IAntiForgeryCookieService _antiforgery;
         private readonly ITokenFactoryService _tokenFactoryService;
 
-        public AuthController(IUsersService usersService, ITokenStoreService tokenStoreService, ITokenFactoryService tokenFactoryService, IUnitOfWork uow, IAntiForgeryCookieService antiforgery)
+        private readonly ILogger<AuthController> _logger;
+
+        public AuthController(IUsersService usersService, ITokenStoreService tokenStoreService, ITokenFactoryService tokenFactoryService, IUnitOfWork uow, IAntiForgeryCookieService antiforgery, ILogger<AuthController> logger)
         {
             _usersService = usersService;
             _usersService.CheckArgumentIsNull(nameof(usersService));
@@ -40,6 +44,8 @@ namespace Ebrahim.Blog.WebApp.Controllers.Identity
 
             _tokenFactoryService = tokenFactoryService;
             _tokenFactoryService.CheckArgumentIsNull(nameof(tokenFactoryService));
+
+            _logger = logger;
         }
 
         /// <summary>
@@ -71,7 +77,18 @@ namespace Ebrahim.Blog.WebApp.Controllers.Identity
         [Consumes("application/json")]
         public async Task<ActionResult<ClientToken>> LoginAsync([FromBody] LoginViewModel loginUser)
         {
-            if (loginUser == null || !ModelState.IsValid)
+            LoginViewModelValidator loginViewModelValidator = new LoginViewModelValidator();
+            var results = loginViewModelValidator.Validate(loginUser);
+
+            if (!results.IsValid)
+            {
+                foreach (var failure in results.Errors)
+                {
+                    _logger.LogInformation("Property " + failure.PropertyName + " failed validation. Error was: " + failure.ErrorMessage);
+                }
+            }
+
+            if (loginUser == null || !ModelState.IsValid || !results.IsValid)
                 return BadRequest("user is not set.");
 
             var user = await _usersService.FindUserAsync(loginUser.Username, loginUser.Password);

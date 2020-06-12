@@ -2,6 +2,7 @@ using System;
 using Ebrahim.Blog.IocConfig;
 using Ebrahim.Blog.Services;
 using Ebrahim.Blog.ViewModels.Settings;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -15,6 +16,7 @@ namespace Ebrahim.Blog.Test.Base
         public BaseControllerTest()
         {
             var services = new ServiceCollection();
+
             services.AddOptions();
             services.AddLogging(cfg => cfg.AddConsole().AddDebug());
             var configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json", optional: false, reloadOnChange: true).Build();
