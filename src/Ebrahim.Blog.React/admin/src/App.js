@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
-import Login from './components/identity/layout/Login';
+import Login from './components/layout/Login';
+import Panel from './components/layout/Panel';
 
 function App() {
   return (
-    <Login></Login>
+    <Panel></Panel>
   );
 }
 
