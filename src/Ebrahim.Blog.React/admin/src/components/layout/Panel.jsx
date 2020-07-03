@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import bg1 from '../../media/misc/bg-1.jpg';
+import englishFlag from '../../media/flag/english.svg';
+import farsiFlag from '../../media/flag/farsi.svg';
 
 class Panel extends Component {
     state = {}
@@ -50,7 +52,7 @@ class Panel extends Component {
                 </div>
                 <div className="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
 
-                    <div id="kt_aside_menu" className="kt-aside-menu " data-ktmenu-vertical="1" data-ktmenu-scroll="1"
+                    <div id="kt_aside_menu" data-scroll-x="true" className="kt-aside-menu " data-ktmenu-vertical="1" data-ktmenu-scroll="1"
                         data-ktmenu-dropdown-timeout="500">
 
 <ul className="kt-menu__nav ">
@@ -62,7 +64,7 @@ class Panel extends Component {
                                 <i className="kt-menu__section-icon flaticon-more-v2"></i>
                             </li>
                             <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                data-ktmenu-submenu-toggle="hover"><a 
                                     className="kt-menu__link kt-menu__toggle"><i
                                         className="kt-menu__link-icon flaticon-web"></i><span
                                         className="kt-menu__link-text">Applications</span><i
@@ -73,7 +75,7 @@ class Panel extends Component {
                                                 className="kt-menu__link"><span
                                                     className="kt-menu__link-text">Applications</span></span></li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span
                                                     className="kt-menu__link-text">Users</span><i
@@ -116,7 +118,7 @@ class Panel extends Component {
                                                                 className="kt-menu__link-text">Edit User</span></a></li>
                                                     <li className="kt-menu__item  kt-menu__item--submenu"
                                                         aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a
-                                                            href="javascript:;" className="kt-menu__link kt-menu__toggle"><i
+                                                             className="kt-menu__link kt-menu__toggle"><i
                                                                 className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                                 className="kt-menu__link-text">Profile 1</span><i
                                                                 className="kt-menu__ver-arrow la la-angle-right"></i></a>
@@ -175,7 +177,7 @@ class Panel extends Component {
                                             </div>
                                         </li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span
                                                     className="kt-menu__link-text">Contacts</span><i
@@ -213,7 +215,7 @@ class Panel extends Component {
                                             </div>
                                         </li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span
                                                     className="kt-menu__link-text">Chat</span><i
@@ -239,7 +241,7 @@ class Panel extends Component {
                                             </div>
                                         </li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span
                                                     className="kt-menu__link-text">Projects</span><i
@@ -295,7 +297,7 @@ class Panel extends Component {
                                             </div>
                                         </li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span
                                                     className="kt-menu__link-text">Support Center</span><i
@@ -351,7 +353,7 @@ class Panel extends Component {
                                 </div>
                             </li>
                             <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                data-ktmenu-submenu-toggle="hover"><a 
                                     className="kt-menu__link kt-menu__toggle"><i
                                         className="kt-menu__link-icon flaticon-tabs"></i><span
                                         className="kt-menu__link-text">Pages</span><i
@@ -362,7 +364,7 @@ class Panel extends Component {
                                                 className="kt-menu__link"><span
                                                     className="kt-menu__link-text">Pages</span></span></li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                     className="kt-menu__link-text">Wizard</span><i
@@ -393,7 +395,7 @@ class Panel extends Component {
                                             </div>
                                         </li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                     className="kt-menu__link-text">Pricing Tables</span><i
@@ -428,7 +430,7 @@ class Panel extends Component {
                                             </div>
                                         </li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                     className="kt-menu__link-text">Invoices</span><i
@@ -449,7 +451,7 @@ class Panel extends Component {
                                             </div>
                                         </li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                     className="kt-menu__link-text">FAQ</span><i
@@ -465,7 +467,7 @@ class Panel extends Component {
                                             </div>
                                         </li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                     className="kt-menu__link-text">User Pages</span><span
@@ -508,7 +510,7 @@ class Panel extends Component {
                                             </div>
                                         </li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                     className="kt-menu__link-text">Error Pages</span><i
@@ -556,7 +558,7 @@ class Panel extends Component {
                                 <i className="kt-menu__section-icon flaticon-more-v2"></i>
                             </li>
                             <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                data-ktmenu-submenu-toggle="hover"><a 
                                     className="kt-menu__link kt-menu__toggle"><i
                                         className="kt-menu__link-icon flaticon-layers"></i><span
                                         className="kt-menu__link-text">Subheaders</span><i
@@ -590,7 +592,7 @@ class Panel extends Component {
                                 </div>
                             </li>
                             <li className="kt-menu__item  kt-menu__item--submenu kt-menu__item--open kt-menu__item--here"
-                                aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a 
                                     className="kt-menu__link kt-menu__toggle"><i
                                         className="kt-menu__link-icon flaticon-interface-8"></i><span
                                         className="kt-menu__link-text">General</span><i
@@ -638,7 +640,7 @@ class Panel extends Component {
                                 <i className="kt-menu__section-icon flaticon-more-v2"></i>
                             </li>
                             <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                data-ktmenu-submenu-toggle="hover"><a 
                                     className="kt-menu__link kt-menu__toggle"><i
                                         className="kt-menu__link-icon flaticon-interface-7"></i><span
                                         className="kt-menu__link-text">Forms</span><i
@@ -649,7 +651,7 @@ class Panel extends Component {
                                                 className="kt-menu__link"><span
                                                     className="kt-menu__link-text">Forms</span></span></li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                     className="kt-menu__link-text">Form Controls</span><i
@@ -690,7 +692,7 @@ class Panel extends Component {
                                             </div>
                                         </li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                     className="kt-menu__link-text">Form Widgets</span><i
@@ -825,7 +827,7 @@ class Panel extends Component {
                                             </div>
                                         </li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                     className="kt-menu__link-text">Form Layouts</span><i
@@ -859,7 +861,7 @@ class Panel extends Component {
                                             </div>
                                         </li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                     className="kt-menu__link-text">Form Validation</span><i
@@ -889,7 +891,7 @@ class Panel extends Component {
                                 </div>
                             </li>
                             <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                data-ktmenu-submenu-toggle="hover"><a 
                                     className="kt-menu__link kt-menu__toggle"><i
                                         className="kt-menu__link-icon flaticon-tabs"></i><span
                                         className="kt-menu__link-text">KTDatatable</span><i
@@ -900,7 +902,7 @@ class Panel extends Component {
                                                 className="kt-menu__link"><span
                                                     className="kt-menu__link-text">KTDatatable</span></span></li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                     className="kt-menu__link-text">Base</span><i
@@ -941,7 +943,7 @@ class Panel extends Component {
                                             </div>
                                         </li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                     className="kt-menu__link-text">Advanced</span><i
@@ -986,7 +988,7 @@ class Panel extends Component {
                                             </div>
                                         </li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                     className="kt-menu__link-text">Child Datatables</span><i
@@ -1007,7 +1009,7 @@ class Panel extends Component {
                                             </div>
                                         </li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                     className="kt-menu__link-text">API</span><i
@@ -1031,7 +1033,7 @@ class Panel extends Component {
                                 </div>
                             </li>
                             <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                data-ktmenu-submenu-toggle="hover"><a 
                                     className="kt-menu__link kt-menu__toggle"><i
                                         className="kt-menu__link-icon flaticon-list-3"></i><span
                                         className="kt-menu__link-text">Datatables.net</span><i
@@ -1042,7 +1044,7 @@ class Panel extends Component {
                                                 className="kt-menu__link"><span
                                                     className="kt-menu__link-text">Datatables.net</span></span></li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                     className="kt-menu__link-text">Basic</span><i
@@ -1076,7 +1078,7 @@ class Panel extends Component {
                                             </div>
                                         </li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                     className="kt-menu__link-text">Advanced</span><i
@@ -1121,7 +1123,7 @@ class Panel extends Component {
                                             </div>
                                         </li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                     className="kt-menu__link-text">Data sources</span><i
@@ -1154,7 +1156,7 @@ class Panel extends Component {
                                             </div>
                                         </li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                     className="kt-menu__link-text">Search Options</span><i
@@ -1176,7 +1178,7 @@ class Panel extends Component {
                                             </div>
                                         </li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                     className="kt-menu__link-text">Extensions</span><i
@@ -1230,7 +1232,7 @@ class Panel extends Component {
                                 </div>
                             </li>
                             <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                data-ktmenu-submenu-toggle="hover"><a 
                                     className="kt-menu__link kt-menu__toggle"><i
                                         className="kt-menu__link-icon flaticon-upload-1"></i><span
                                         className="kt-menu__link-text">File Upload</span><i
@@ -1256,7 +1258,7 @@ class Panel extends Component {
                                 <i className="kt-menu__section-icon flaticon-more-v2"></i>
                             </li>
                             <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                data-ktmenu-submenu-toggle="hover"><a 
                                     className="kt-menu__link kt-menu__toggle"><i
                                         className="kt-menu__link-icon flaticon-layers"></i><span
                                         className="kt-menu__link-text">Base</span><i
@@ -1327,7 +1329,7 @@ class Panel extends Component {
                                 </div>
                             </li>
                             <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                data-ktmenu-submenu-toggle="hover"><a 
                                     className="kt-menu__link kt-menu__toggle"><i
                                         className="kt-menu__link-icon flaticon-background"></i><span
                                         className="kt-menu__link-text">Custom</span><i
@@ -1394,7 +1396,7 @@ class Panel extends Component {
                                 </div>
                             </li>
                             <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                data-ktmenu-submenu-toggle="hover"><a 
                                     className="kt-menu__link kt-menu__toggle"><i
                                         className="kt-menu__link-icon flaticon-light"></i><span
                                         className="kt-menu__link-text">Extended</span><i
@@ -1444,7 +1446,7 @@ class Panel extends Component {
                                 </div>
                             </li>
                             <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                data-ktmenu-submenu-toggle="hover"><a 
                                     className="kt-menu__link kt-menu__toggle"><i
                                         className="kt-menu__link-icon flaticon-open-box"></i><span
                                         className="kt-menu__link-text">Icons</span><i
@@ -1476,7 +1478,7 @@ class Panel extends Component {
                                 </div>
                             </li>
                             <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                data-ktmenu-submenu-toggle="hover"><a 
                                     className="kt-menu__link kt-menu__toggle"><i
                                         className="kt-menu__link-icon flaticon-interface-1"></i><span
                                         className="kt-menu__link-text">Portlets</span><i
@@ -1516,7 +1518,7 @@ class Panel extends Component {
                                 </div>
                             </li>
                             <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                data-ktmenu-submenu-toggle="hover"><a 
                                     className="kt-menu__link kt-menu__toggle"><i
                                         className="kt-menu__link-icon flaticon-rocket"></i><span
                                         className="kt-menu__link-text">Widgets</span><i
@@ -1542,7 +1544,7 @@ class Panel extends Component {
                                 </div>
                             </li>
                             <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                data-ktmenu-submenu-toggle="hover"><a 
                                     className="kt-menu__link kt-menu__toggle"><i
                                         className="kt-menu__link-icon flaticon-calendar"></i><span
                                         className="kt-menu__link-text">Calendar</span><i
@@ -1579,7 +1581,7 @@ class Panel extends Component {
                                 </div>
                             </li>
                             <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                data-ktmenu-submenu-toggle="hover"><a 
                                     className="kt-menu__link kt-menu__toggle"><i
                                         className="kt-menu__link-icon flaticon-diagram"></i><span
                                         className="kt-menu__link-text">Charts</span><i
@@ -1590,7 +1592,7 @@ class Panel extends Component {
                                                 className="kt-menu__link"><span
                                                     className="kt-menu__link-text">Charts</span></span></li>
                                         <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                            data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                            data-ktmenu-submenu-toggle="hover"><a 
                                                 className="kt-menu__link kt-menu__toggle"><i
                                                     className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                     className="kt-menu__link-text">amCharts</span><i
@@ -1635,7 +1637,7 @@ class Panel extends Component {
                                 </div>
                             </li>
                             <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                data-ktmenu-submenu-toggle="hover"><a 
                                     className="kt-menu__link kt-menu__toggle"><i
                                         className="kt-menu__link-icon flaticon-placeholder"></i><span
                                         className="kt-menu__link-text">Maps</span><i
@@ -1657,7 +1659,7 @@ class Panel extends Component {
                                 </div>
                             </li>
                             <li className="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                data-ktmenu-submenu-toggle="hover"><a 
                                     className="kt-menu__link kt-menu__toggle"><i
                                         className="kt-menu__link-icon flaticon-web"></i><span
                                         className="kt-menu__link-text">Utils</span><i
@@ -1694,7 +1696,7 @@ class Panel extends Component {
         className="kt-header-menu kt-header-menu-mobile  kt-header-menu--layout-default ">
         <ul className="kt-menu__nav ">
             <li className="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel kt-menu__item--active"
-                data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;"
+                data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a 
                     className="kt-menu__link kt-menu__toggle"><span
                         className="kt-menu__link-text">Pages</span><i
                         className="kt-menu__ver-arrow la la-angle-right"></i></a>
@@ -1719,7 +1721,7 @@ class Panel extends Component {
                                         </g>
                                     </svg></span><span className="kt-menu__link-text">My
                                     Account</span></a></li>
-                        <li className="kt-menu__item " aria-haspopup="true"><a href="javascript:;"
+                        <li className="kt-menu__item " aria-haspopup="true"><a 
                                 className="kt-menu__link "><span className="kt-menu__link-icon"><svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         xlink="http://www.w3.org/1999/xlink" width="24px"
@@ -1741,7 +1743,7 @@ class Panel extends Component {
                         </li>
                         <li className="kt-menu__item  kt-menu__item--submenu"
                             data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
-                                href="javascript:;" className="kt-menu__link kt-menu__toggle"><span
+                                 className="kt-menu__link kt-menu__toggle"><span
                                     className="kt-menu__link-icon"><svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         xlink="http://www.w3.org/1999/xlink" width="24px"
@@ -1762,32 +1764,32 @@ class Panel extends Component {
                                 className="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
                                 <ul className="kt-menu__subnav">
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                 className="kt-menu__link-text">Add Team
                                                 Member</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                 className="kt-menu__link-text">Edit Team
                                                 Member</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                 className="kt-menu__link-text">Delete Team
                                                 Member</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                 className="kt-menu__link-text">Team Member
                                                 Reports</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                 className="kt-menu__link-text">Assign Tasks</span></a>
                                     </li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                 className="kt-menu__link-text">Promote Team
                                                 Member</span></a></li>
@@ -1820,34 +1822,34 @@ class Panel extends Component {
                                 className="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
                                 <ul className="kt-menu__subnav">
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span
                                                 className="kt-menu__link-text">Latest
                                                 Projects</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span
                                                 className="kt-menu__link-text">Ongoing
                                                 Projects</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span
                                                 className="kt-menu__link-text">Urgent
                                                 Projects</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span
                                                 className="kt-menu__link-text">Completed
                                                 Projects</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span
                                                 className="kt-menu__link-text">Dropped
                                                 Projects</span></a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li className="kt-menu__item " aria-haspopup="true"><a href="javascript:;"
+                        <li className="kt-menu__item " aria-haspopup="true"><a 
                                 className="kt-menu__link "><span className="kt-menu__link-icon"><svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         xlink="http://www.w3.org/1999/xlink" width="24px"
@@ -1866,7 +1868,7 @@ class Panel extends Component {
                 </div>
             </li>
             <li className="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel"
-                data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;"
+                data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a 
                     className="kt-menu__link kt-menu__toggle"><span
                         className="kt-menu__link-text">Features</span><i
                         className="kt-menu__ver-arrow la la-angle-right"></i></a>
@@ -1881,7 +1883,7 @@ class Panel extends Component {
                                         className="kt-menu__ver-arrow la la-angle-right"></i></h3>
                                 <ul className="kt-menu__inner">
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><span
+                                             className="kt-menu__link "><span
                                                 className="kt-menu__link-icon"><svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     xlink="http://www.w3.org/1999/xlink"
@@ -1902,7 +1904,7 @@ class Panel extends Component {
                                                 </svg></span><span className="kt-menu__link-text">Latest
                                                 Tasks</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><span
+                                             className="kt-menu__link "><span
                                                 className="kt-menu__link-icon"><svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     xlink="http://www.w3.org/1999/xlink"
@@ -1924,7 +1926,7 @@ class Panel extends Component {
                                                 className="kt-menu__link-text">Pending Tasks</span></a>
                                     </li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><span
+                                             className="kt-menu__link "><span
                                                 className="kt-menu__link-icon"><svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     xlink="http://www.w3.org/1999/xlink"
@@ -1945,7 +1947,7 @@ class Panel extends Component {
                                                 </svg></span><span className="kt-menu__link-text">Urgent
                                                 Tasks</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><span
+                                             className="kt-menu__link "><span
                                                 className="kt-menu__link-icon"><svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     xlink="http://www.w3.org/1999/xlink"
@@ -1967,7 +1969,7 @@ class Panel extends Component {
                                                 className="kt-menu__link-text">Completed
                                                 Tasks</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><span
+                                             className="kt-menu__link "><span
                                                 className="kt-menu__link-icon"><svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     xlink="http://www.w3.org/1999/xlink"
@@ -2001,32 +2003,32 @@ class Panel extends Component {
                                         className="kt-menu__ver-arrow la la-angle-right"></i></h3>
                                 <ul className="kt-menu__inner">
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span
                                                 className="kt-menu__link-text">Overall
                                                 Profits</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span
                                                 className="kt-menu__link-text">Gross Profits</span></a>
                                     </li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span
                                                 className="kt-menu__link-text">Nett Profits</span></a>
                                     </li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span
                                                 className="kt-menu__link-text">Year to Date
                                                 Reports</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span
                                                 className="kt-menu__link-text">Quarterly
                                                 Profits</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span
                                                 className="kt-menu__link-text">Monthly
                                                 Profits</span></a></li>
@@ -2039,32 +2041,32 @@ class Panel extends Component {
                                         className="kt-menu__ver-arrow la la-angle-right"></i></h3>
                                 <ul className="kt-menu__inner">
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                 className="kt-menu__link-text">Top Management</span></a>
                                     </li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                 className="kt-menu__link-text">Project
                                                 Managers</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                 className="kt-menu__link-text">Development
                                                 Staff</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                 className="kt-menu__link-text">Customer
                                                 Service</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                 className="kt-menu__link-text">Sales and
                                                 Marketing</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                 className="kt-menu__link-text">Executives</span></a>
                                     </li>
@@ -2077,27 +2079,27 @@ class Panel extends Component {
                                         className="kt-menu__ver-arrow la la-angle-right"></i></h3>
                                 <ul className="kt-menu__inner">
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><span
+                                             className="kt-menu__link "><span
                                                 className="kt-menu__link-text">Analytical
                                                 Reports</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><span
+                                             className="kt-menu__link "><span
                                                 className="kt-menu__link-text">Customer CRM</span></a>
                                     </li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><span
+                                             className="kt-menu__link "><span
                                                 className="kt-menu__link-text">Operational
                                                 Growth</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><span
+                                             className="kt-menu__link "><span
                                                 className="kt-menu__link-text">Social Media
                                                 Presence</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><span
+                                             className="kt-menu__link "><span
                                                 className="kt-menu__link-text">Files and
                                                 Directories</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><span
+                                             className="kt-menu__link "><span
                                                 className="kt-menu__link-text">Audit & Logs</span></a>
                                     </li>
                                 </ul>
@@ -2107,13 +2109,13 @@ class Panel extends Component {
                 </div>
             </li>
             <li className="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel"
-                data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;"
+                data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a 
                     className="kt-menu__link kt-menu__toggle"><span
                         className="kt-menu__link-text">Apps</span><i
                         className="kt-menu__ver-arrow la la-angle-right"></i></a>
                 <div className="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
                     <ul className="kt-menu__subnav">
-                        <li className="kt-menu__item " aria-haspopup="true"><a href="javascript:;"
+                        <li className="kt-menu__item " aria-haspopup="true"><a 
                                 className="kt-menu__link "><span className="kt-menu__link-icon"><svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         xlink="http://www.w3.org/1999/xlink" width="24px"
@@ -2155,34 +2157,34 @@ class Panel extends Component {
                                 className="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
                                 <ul className="kt-menu__subnav">
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                 className="kt-menu__link-text">Reached Users</span></a>
                                     </li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                 className="kt-menu__link-text">SEO Ranking</span></a>
                                     </li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                 className="kt-menu__link-text">User Dropout
                                                 Points</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                 className="kt-menu__link-text">Market
                                                 Segments</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                 className="kt-menu__link-text">Opportunity
                                                 Growth</span></a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li className="kt-menu__item " aria-haspopup="true"><a href="javascript:;"
+                        <li className="kt-menu__item " aria-haspopup="true"><a 
                                 className="kt-menu__link "><span className="kt-menu__link-icon"><svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         xlink="http://www.w3.org/1999/xlink" width="24px"
@@ -2197,7 +2199,7 @@ class Panel extends Component {
                                         </g>
                                     </svg></span><span className="kt-menu__link-text">Sales &
                                     Marketing</span></a></li>
-                        <li className="kt-menu__item " aria-haspopup="true"><a href="javascript:;"
+                        <li className="kt-menu__item " aria-haspopup="true"><a 
                                 className="kt-menu__link "><span className="kt-menu__link-icon"><svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         xlink="http://www.w3.org/1999/xlink" width="24px"
@@ -2219,7 +2221,7 @@ class Panel extends Component {
                         </li>
                         <li className="kt-menu__item  kt-menu__item--submenu"
                             data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
-                                href="javascript:;" className="kt-menu__link kt-menu__toggle"><span
+                                 className="kt-menu__link kt-menu__toggle"><span
                                     className="kt-menu__link-icon"><svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         xlink="http://www.w3.org/1999/xlink" width="24px"
@@ -2243,24 +2245,24 @@ class Panel extends Component {
                                 className="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
                                 <ul className="kt-menu__subnav">
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span
                                                 className="kt-menu__link-text">Merge Branch</span><span
                                                 className="kt-menu__link-badge"><span
                                                     className="kt-badge kt-badge--danger kt-badge--rounded">3</span></span></a>
                                     </li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span
                                                 className="kt-menu__link-text">Version
                                                 Controls</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span
                                                 className="kt-menu__link-text">Database
                                                 Manager</span></a></li>
                                     <li className="kt-menu__item " aria-haspopup="true"><a
-                                            href="javascript:;" className="kt-menu__link "><i
+                                             className="kt-menu__link "><i
                                                 className="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span
                                                 className="kt-menu__link-text">System
                                                 Settings</span></a></li>
@@ -3037,7 +3039,7 @@ class Panel extends Component {
     <div className="kt-header__topbar-item kt-header__topbar-item--langs">
         <div className="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
             <span className="kt-header__topbar-icon">
-                <img className="" src="./assets/media/flags/020-flag.svg" alt="" />
+                <img className="" src={farsiFlag} alt="" />
             </span>
         </div>
         <div
@@ -3045,23 +3047,14 @@ class Panel extends Component {
             <ul className="kt-nav kt-margin-t-10 kt-margin-b-10">
                 <li className="kt-nav__item kt-nav__item--active">
                     <a href="#" className="kt-nav__link">
-                        <span className="kt-nav__link-icon"><img src="./assets/media/flags/020-flag.svg"
-                                alt="" /></span>
+                        <span className="kt-nav__link-icon"><img src={farsiFlag} alt="" /></span>
+                        <span className="kt-nav__link-text">فارسی</span>
+                    </a>
+                </li>
+                <li className="kt-nav__item">
+                    <a href="#" className="kt-nav__link">
+                        <span className="kt-nav__link-icon"><img src={englishFlag} alt="" /></span>
                         <span className="kt-nav__link-text">English</span>
-                    </a>
-                </li>
-                <li className="kt-nav__item">
-                    <a href="#" className="kt-nav__link">
-                        <span className="kt-nav__link-icon"><img
-                                src="./assets/media/flags/016-spain.svg" alt="" /></span>
-                        <span className="kt-nav__link-text">Spanish</span>
-                    </a>
-                </li>
-                <li className="kt-nav__item">
-                    <a href="#" className="kt-nav__link">
-                        <span className="kt-nav__link-icon"><img
-                                src="./assets/media/flags/017-germany.svg" alt="" /></span>
-                        <span className="kt-nav__link-text">German</span>
                     </a>
                 </li>
             </ul>
