@@ -32,8 +32,8 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1399px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  --font-family-sans-serif: 'Samim',Tahoma !important;
+  --font-family-monospace: 'Samim',Tahoma !important; }
 
 *,
 *::before,
@@ -42,7 +42,7 @@
   box-sizing: border-box; }
 
 html {
-  font-family: sans-serif;
+  font-family: 'Samim',Tahoma;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
@@ -52,7 +52,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Poppins";
+  font-family: 'Samim',Tahoma;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -155,7 +155,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: 'Samim',Tahoma;
   font-size: 1em; }
 
 pre {
@@ -4863,7 +4863,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Poppins";
+  font-family: 'Samim',Tahoma;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4948,7 +4948,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Poppins";
+  font-family: 'Samim',Tahoma;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -11829,7 +11829,7 @@ code {
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
+  font-family: 'Samim',Tahoma;
   -moz-text-size-adjust: 100%;
   text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -11843,7 +11843,7 @@ body {
   padding: 0px;
   font-size: 13px;
   font-weight: 300;
-  font-family: Poppins;
+  font-family: 'Samim',Tahoma !important;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -23361,7 +23361,7 @@ strong {
   box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
   border-radius: 4px;
   border: 0;
-  font-family: Poppins;
+  font-family: 'Samim',Tahoma;
   z-index: 95; }
   .modal-open .daterangepicker {
     z-index: 1051; }
@@ -24327,7 +24327,7 @@ strong {
   padding: 0.5rem 0;
   min-width: 150px;
   font-size: 1rem;
-  font-family: Poppins;
+  font-family: 'Samim',Tahoma;
   background: #fff;
   -webkit-box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
   box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
@@ -24944,7 +24944,7 @@ body.swal2-height-auto {
       background-color: #f2f3f7; }
 
 .kt-uppy .uppy-Root {
-  font-family: "Poppins"; }
+  font-family: 'Samim',Tahoma; }
   .kt-uppy .uppy-Root.uppy-DragDrop--is-dragdrop-supported {
     border: 2px dashed #ebedf2; }
 
