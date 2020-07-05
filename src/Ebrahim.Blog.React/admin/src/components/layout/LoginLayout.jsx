@@ -1,5 +1,7 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
 
+import LogoWhite from "../../media/logo-white.png";
 import Background from '../../media/background/bg-2.jpg';
 
 const LoginLayout = props => {
@@ -9,16 +11,16 @@ const LoginLayout = props => {
                 <div className="kt-login__container">
                     <div className="kt-login__logo">
                         <a href="#">
-                            <img src="./assets/media/logos/logo-5.png" />
+                            <img src={LogoWhite} />
                         </a>
                     </div>
                     {props.children}
                     <div className="kt-login__account">
                         <span className="kt-login__account-msg">
-                            Don't have an account yet ?
+                            حساب کاربری نداری؟ 
 					</span>
 					&nbsp;&nbsp;
-					<a href="javascript:;" id="kt_login_signup" className="kt-login__account-link">Sign Up!</a>
+					<Link to="/auth/register" className="kt-login__account-link">ثبت‌نام!</Link>
                     </div>
                 </div>
             </div>
