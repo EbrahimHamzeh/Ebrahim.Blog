@@ -9,13 +9,16 @@ import 'perfect-scrollbar/dist/perfect-scrollbar.js';
 import '../src/venders/flaticon/flaticon.css';
 import '../src/venders/line-awesome/css/line-awesome.css';
 import $ from 'jquery';
+import { BrowserRouter } from 'react-router-dom';
 
 window.jQuery = $;
 window.$ = $;
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
