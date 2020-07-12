@@ -9860,7 +9860,7 @@ var KTLayout = function() {
 
 			// Non functional links notice(can be removed in production)
 			$('#kt_aside_menu, #kt_header_menu').on('click', '.kt-menu__link[href="#"]', function(e) {
-				swal.fire("", "You have clicked on a non-functional dummy link!");
+				// swal.fire("", "You have clicked on a non-functional dummy link!");
 
 				e.preventDefault();
 			});

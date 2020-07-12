@@ -40,7 +40,7 @@ class Login extends Form {
             console.log("JWT", accessToken);
             localStorage.setItem("token", accessToken);
             localStorage.setItem("refreshToken", refreshToken);
-            this.props.history.push("/panel/dashboard");
+            this.props.history.push("/admin/dashboard");
         } catch (ex) {
             if (ex.response && ex.response.status === 400) {
                 const errors = { ...this.state.errors };
