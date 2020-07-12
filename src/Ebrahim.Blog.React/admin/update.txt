@@ -1,0 +1,9 @@
+npm i -g npm
+npm cache verify
+npm update -g
+
+
+
+npm install npm-check-updates -g
+ncu -u
+npm install
