@@ -21,13 +21,14 @@ function App() {
           <Route path="/auth/forgot-password" component={ForgotPassword} />
         </LoginLayout>
       </Route>
-      <Route exact path={["/admin", "/admin/dashboard", "/admin/users"]}>
+      <Route exact path={["/admin/dashboard", "/admin/users"]}>
         <PanelLayout>
-          <ProtectedRoute exact path={["/admin", "/admin/dashboard"]} component={Dashboard} />
-          <ProtectedRoute path={"/admin/users"} component={Users} />
+          <Switch>
+            <ProtectedRoute path={"/admin/dashboard"} component={Dashboard} />
+            <ProtectedRoute path={"/admin/users"} component={Users} />
+          </Switch>
         </PanelLayout>
       </Route>
-
       <Route path="/not-found" component={NotFound} />
       <Redirect to="/not-found" />
     </Switch>

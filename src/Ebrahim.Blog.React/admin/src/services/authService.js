@@ -7,7 +7,7 @@ const apiLoginAddress = '/auth/login';
 const apiAllUsersAddress = '/users';
 
 export async function getLogin(username, password) {
-  const { data: { accessToken, refreshToken } } = httpService.post(apiLoginAddress, { username, password });
+  const { data: { accessToken, refreshToken } } = await httpService.post(apiLoginAddress, { username, password });
   localStorage.setItem(tokenKey, accessToken);
   localStorage.setItem(refreshTokenKey, refreshToken);
 }
