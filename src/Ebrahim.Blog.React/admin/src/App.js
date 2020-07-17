@@ -9,6 +9,7 @@ import Register from './components/identity/register';
 import ForgotPassword from './components/identity/forgot-password';
 import NotFound from './components/errors/notFound';
 import Users from './components/panel/User/Users';
+import ProtectedRoute from './components/commen/protectedRoute';
 
 function App() {
   return (
@@ -20,15 +21,15 @@ function App() {
           <Route path="/auth/forgot-password" component={ForgotPassword} />
         </LoginLayout>
       </Route>
-       <Route exact path={["/admin", "/admin/dashboard", "/admin/users"]}>
+      <Route exact path={["/admin", "/admin/dashboard", "/admin/users"]}>
         <PanelLayout>
-          <Route exact path={["/admin", "/admin/dashboard"]} component={Dashboard} />
-          <Route path={"/admin/users"} component={Users} />
+          <ProtectedRoute exact path={["/admin", "/admin/dashboard"]} component={Dashboard} />
+          <ProtectedRoute path={"/admin/users"} component={Users} />
         </PanelLayout>
       </Route>
 
       <Route path="/not-found" component={NotFound} />
-      <Redirect to="/not-found"/>
+      <Redirect to="/not-found" />
     </Switch>
   );
 }

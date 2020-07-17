@@ -1,7 +1,7 @@
 import React from "react";
 import Joi from "@hapi/joi";
 import { Link } from "react-router-dom";
-import * as auth from "../../services/UserService";
+import * as auth from "../../services/authService";
 import Form from "../commen/form";
 
 class Login extends Form {
@@ -36,12 +36,7 @@ class Login extends Form {
   doSubmit = async () => {
     try {
       const { data } = this.state;
-      const {
-        data: { accessToken, refreshToken },
-      } = await auth.getLogin(data.username, data.password);
-      console.log("JWT", accessToken);
-      localStorage.setItem("token", accessToken);
-      localStorage.setItem("refreshToken", refreshToken);
+      await auth.getLogin(data.username, data.password);
       this.props.history.push("/admin/dashboard");
     } catch (ex) {
       if (ex.response && ex.response.status === 400) {
